@@ -1,4 +1,4 @@
-from usaneo.core import usaneo_init, usaneo_quit, dont_update, usaneo_handle_events
+from usaneo.core import usaneo_init, usaneo_quit, usaneo_update, usaneo_handle_events
 from usaneo.sprites import UsaneoSprite, UsaneoFont
 def main():
     screen = dont_init(800, 600)
