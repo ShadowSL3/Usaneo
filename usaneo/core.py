@@ -3,11 +3,14 @@ def usaneo_init(width, height):
     pygame.init()
     screen = pygame.display.set_mode((width, height))
     return screen
+def Camera2D():
+    pygame.camera.init()
+    camera_dev = pygame.camera.list_cameras()[-1]
+    cam = pygame.camera.Camera(camera_dev)
 def usaneo_filler(fill_object):
     fill_objecter = usaneo_init().fill(color=())
 def usaneo_quit():
     pygame.quit()
-
 def Usaneo_Vec2(self, scales):
     self.scales = pygame.transform.scale(self.scales, (50,50))
 
