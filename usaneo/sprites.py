@@ -8,6 +8,7 @@ class UsaneoSprite:
     def draw(self, screen):
         screen.blit(self.image, self.rect)
 
+
 class UsaneoFont:
     def __init__(self, font_path, size):
         self.font = pygame.font.Font(font_path, size)
