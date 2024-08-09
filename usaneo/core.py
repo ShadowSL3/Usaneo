@@ -24,4 +24,4 @@ def usaneo_handle_events():
             return False
         if event.type == Usaneo_audio_handle_event:
             Usaneo_audio_handle_event(audio_usaneo=())
-    return True
+            return True
