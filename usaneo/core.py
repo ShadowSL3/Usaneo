@@ -1,8 +1,13 @@
 import pygame
-def usaneo_init(width, height):
+def usaneo_init():
     pygame.init()
-    screen = pygame.display.set_mode((width, height))
+    screen = pygame.display.set_mode(())
     return screen
+
+def Useneo_physics():
+    pass    
+def USR2D():
+    pass
 def Camera2D():
     pygame.camera.init()
     camera_dev = pygame.camera.list_cameras()[-1]
