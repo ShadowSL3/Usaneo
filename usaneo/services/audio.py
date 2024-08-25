@@ -10,3 +10,6 @@ def Music(self, music_init, filename, play_music):
 def Sound(self, sound_init):
     self.soundInit = pygame.mixer.Sound(file=())
     self.init_sound = pygame.mixer.Sound().play(sound_init)
+def Sound_Typer(self):
+    self.soundType = pygame.mixer.SoundType()
+    

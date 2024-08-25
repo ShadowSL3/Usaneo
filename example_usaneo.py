@@ -8,7 +8,7 @@ def main():
     while running:
         running = usaneo_handle_events()
         usaneo_update()
-        Music(music_init="
+        
     usaneo_quit()
 
 if __name__ == "__main__":
