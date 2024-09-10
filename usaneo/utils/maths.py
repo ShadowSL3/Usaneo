@@ -5,6 +5,5 @@ class Vec2:
         self.vec2 = pygame.math.Vector2
         
 class Vec3:
-    def __init__(self, vec3, value_clamp:float, min_clamp:float, max:float):
+    def __init__(self, vec3):
         self.vec3 = pygame.math.Vector3
-        self.clam = pygame.math.clamp(value_clamp, min_clamp, max)
