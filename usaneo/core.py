@@ -1,9 +1,9 @@
 import pygame
-def usaneo_init():
-    pygame.init()
-    screen = pygame.display.set_mode(())
-    return screen
 
+def usaneo_init(width:float, height:float):
+    pygame.init()
+    screen = pygame.display.set_mode((width, height))
+    return screen
 def Useneo_physics():
     pass    
 def USR2D():
