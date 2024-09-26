@@ -2,13 +2,14 @@ from usaneo.core import usaneo_init, usaneo_quit, usaneo_update, usaneo_handle_e
 from usaneo.sprites import UsaneoSprite, UsaneoFont
 from usaneo.fast_event import FastEvent_Core
 from usaneo.services.audio import Music
+from usaneo.utils.system import system
 def main():
     screen = usaneo_init(800, 600)
     running = True
     while running:
         running = usaneo_handle_events()
         usaneo_update()
-        
+        system.Os_File()
     usaneo_quit()
 
 if __name__ == "__main__":

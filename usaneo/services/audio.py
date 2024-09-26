@@ -12,4 +12,9 @@ def Sound(self, sound_init):
     self.init_sound = pygame.mixer.Sound().play(sound_init)
 def Sound_Typer(self):
     self.soundType = pygame.mixer.SoundType()
-    
+
+class Audio_Multiply:
+    def __init__(self, audio_multiply_init, db, file) -> None:
+        self.audio_init_multiply = pygame.mixer.get_init(audio_multiply_init)
+        self.db = pow(10, -6/20)
+        self.file = ""
