@@ -6,7 +6,7 @@ Usaneo Game Engine Flexible Based Pygame
 pip install -r requirements.txt 
 ```
 ## Planned Features 
-- [] UI 
-- [] AudioSystem
-- [] Multply Vertex Shading 2D
-- [] Physics 2D Improve
+- [ ] UI 
+- [ ] AudioSystem
+- [ ] Multply Vertex Shading 2D
+- [ ] Physics 2D Improve
