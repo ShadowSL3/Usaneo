@@ -8,7 +8,7 @@ pip install -r requirements.txt
 ## Planned Features 
 - [ ] UI 
 - [ ] AudioSystem
-- [ ] Multiple Vertex Shading 2D
+- [ ] Multiply Vertex Shading 2D
 - [ ] Physics 2D Improve
 - [ ] Fsr Support 
 - [ ] Pipeline Multiply Addating 
