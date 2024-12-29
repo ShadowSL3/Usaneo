@@ -1,5 +1,5 @@
-# Usaneo
-Usaneo Game Engine Flexible Based Pygame 
+# Usando
+Usano Game Engine Flexible Based Pygame 
 
 # Installation 
 ```sh
