@@ -1,4 +1,4 @@
-# Usaneo Ɑ͞ ̶͞ ̶͞ ̶͞ لں͞
+# Usaneo 
 Usaneo Game Engine Flexible Based Pygame 
 
 # Installation 
