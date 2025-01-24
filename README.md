@@ -12,7 +12,7 @@ pip install -r requirements.txt
 - [ ] Physics 2D Improve
 - [ ] Fsr Support 
 - [ ] Pipeline Multiply Addating
-
+- [ ] Particles
 # Actually Features Implemented 
 - [x] File Loader
 - [x] Audio Management
