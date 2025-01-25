@@ -1,7 +1,8 @@
 import pygame
+import usaneo.constants as cost
 def usaneo_init():
     pygame.init()
-    screen = pygame.display.set_mode(())
+    screen = pygame.display.set_mode((cost.Constants.WIDTH, cost.Constants.HEIGHT))
     return screen
 
 def Useneo_physics():

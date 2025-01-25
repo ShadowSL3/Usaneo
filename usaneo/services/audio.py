@@ -8,10 +8,8 @@ def Music(self, music_init, filename, play_music):
     self.music_play = pygame.mixer.music.play(music_init)
     
 def Sound(self, sound_init):
-    self.soundInit = pygame.mixer.Sound(file=())
+    self.soundInit = pygame.mixer.Sound()
     self.init_sound = pygame.mixer.Sound().play(sound_init)
-def Sound_Typer(self):
-    self.soundType = pygame.mixer.SoundType()
 
 class Audio_Multiply:
     def __init__(self, audio_multiply_init, db, file) -> None:
