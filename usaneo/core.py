@@ -1,7 +1,8 @@
 import pygame
+import constants
 def usaneo_init():
     pygame.init()
-    screen = pygame.display.set_mode(())
+    screen = pygame.display.set_mode((Constants.SC_W, Constants.SC_H))
     return screen
 
 def Useneo_physics():
