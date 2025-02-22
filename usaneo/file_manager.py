@@ -1,6 +1,8 @@
 import os
 import shutil
-
+FILE_MANAGEMENT = os.path.isfile()
+PATH = os.path()
+=======
 class FileManager:
     def __init__(self, base_path):
         self.base_path = base_path

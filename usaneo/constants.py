@@ -1,3 +1,6 @@
+import pygame
+
+
 class Constants:
-    WIDTH = 800 
-    HEIGHT = 600 
+    SC_W = 500 
+    SC_H = 512
