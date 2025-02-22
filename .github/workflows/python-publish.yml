@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Upload Python Package
+name: Usaneo
 
 on:
   release:
@@ -27,13 +27,13 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install dependencies
-      run: |
+      run: 
         python -m pip install --upgrade pip
-        pip install build
-    - name: Build package
-      run: python -m build
-    - name: Publish package
+        pip install pygame
+    - name: Usaneo
+      run: python -m example_usaneo.py
+    - name: Usaneo
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
       with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+       user: __token__
+       password: ${{ secrets.PYPI_API_TOKEN }}

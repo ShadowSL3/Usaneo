@@ -20,17 +20,19 @@ def usaneo_quit():
 def Usaneo_Vec2(self, scales):
     self.scales = pygame.transform.scale(self.scales, (50,50))
 
-def usaneo_display_flip(flip_screen):
-    flip_screen = pygame.display.flip()
-def usaneo_update():
-    pygame.display.update
+def usaneo_init():
+    pygame.init()
+    screen = pygame.display.set_mode((Constants.SC_W, Constants.SC_H))
+    usaneo_title = pygame.display.set_caption("Usaneo")
+class Event: 
+    def event(screen):
+        screen = pygame.display.set_mode((cost.Constants.WIDTH,cost.Constants.HEIGHT))
+        running = True
+        while running: 
+            for evt in pygame.event.get():
+                if evt.type == pygame.QUIT:
+                    running = False
+                    pygame.quit()
 
-def Usaneo_audio_handle_event(self, audio_usaneo, usaneo_mixer_load_music, usaneo_mixer_load_sound):
-    self.audio_usaneo = pygame.mixer.music.load(filename=())
-def usaneo_handle_events():
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            return False
-        if event.type == Usaneo_audio_handle_event:
-            Usaneo_audio_handle_event(audio_usaneo=())
-    return True
+def update_Screen():
+    pygame.display.update()
