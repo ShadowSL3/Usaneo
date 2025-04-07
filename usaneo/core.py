@@ -1,8 +1,9 @@
 import pygame
-import constants
-def usaneo_init():
+
+
+def usaneo_init(self, width=480, height=272):
     pygame.init()
-    screen = pygame.display.set_mode((Constants.SC_W, Constants.SC_H))
+    screen = pygame.display.set_mode((width, height))
     return screen
 
 def Useneo_physics():
@@ -19,14 +20,10 @@ def usaneo_quit():
     pygame.quit()
 def Usaneo_Vec2(self, scales):
     self.scales = pygame.transform.scale(self.scales, (50,50))
-
-def usaneo_init():
-    pygame.init()
-    screen = pygame.display.set_mode((Constants.SC_W, Constants.SC_H))
-    usaneo_title = pygame.display.set_caption("Usaneo")
+    
 class Event: 
-    def event(screen):
-        screen = pygame.display.set_mode((cost.Constants.WIDTH,cost.Constants.HEIGHT))
+    def event(screen, width=480, height=272):
+        screen = pygame.display.set_mode((width, height))
         running = True
         while running: 
             for evt in pygame.event.get():
@@ -35,4 +32,4 @@ class Event:
                     pygame.quit()
 
 def update_Screen():
-    pygame.display.update()
+    pygame.display.flip()
