@@ -1,0 +1,41 @@
+# 1.0.1 RC2 — Change of Gear
+
+Six months. That’s how long it’s been since the last core refactor.  
+This release isn’t just a revision — it’s a direction shift.
+
+Some code aged well. Some didn’t. And some just had to go.
+
+---
+
+## Core Structure Updated
+
+Let’s talk about structure.  
+We wanted flexibility. A cleaner namespace. A setup that just *feels* right.
+
+### Before (legacy):
+```python
+from usaneo.core import usaneo_init
+```
+
+## New(standard):
+```python 
+import usaneo.core as usc
+
+ddf main():
+  screen = usc.Screen()
+
+```
+
+# What We say GoodBye To
+
+There’s always that moment in development where you realize:
+“This no longer serves us.” And so, we cleaned house.
+- sprites.py(removed)
+- osio.py(removed)
+- file_manager.py(removed)
+- audio.py(removed)
+- system.py(removed)
+- fast_event.py(removed)
+
+# Now Your opion 
+Ti piace questo aggiornamento se si Faccelo sapere con un emoji o qualsiasi cosa Alla prossima.
