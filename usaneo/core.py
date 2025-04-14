@@ -1,9 +1,30 @@
-import pygame
+import pygame, sys
 
 pygame.init()
 pygame.display.set_caption("Usaneo")
 
 
+
+vol = -1
+vol2 = -1
+
+class KeyBoard:
+    """ KEYBOARD EVENT"""
+    def __init__(self):
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                pygame.quit()
+                sys.exit(0)
+    @property
+    def left_arrow(self):
+        return [pygame.K_LEFT]
+    @property
+    def right_arrow(self):
+        return [pygame.K_RIGHT]
+        
+    @property
+    def left_arrow(self):
+        return [pygame.K_LEFT]
 class Screen:
     def __init__(self, width=480, height=272):
         self.screen = pygame.display.set_mode((width, height))
@@ -31,8 +52,7 @@ class Screen:
         self.screen.blit(tmp, (dx, dy))
     
     def update_screen(self):
-        pygame.display.flip()
-        pygame.event.pump()
+        pygame.display.update()
     
     def clear_screen(self, color):
         self.screen.fill(color)
@@ -83,3 +103,33 @@ class Image(pygame.Surface):
     @property
     def height(self):
         return self.get_height()
+        
+class Mask:
+    pass
+    
+class Music:
+    def __init__(self, filename, loop=False):
+        self.loop = loop
+        self.sound = pygame.mixer.music.load(filename)
+        if not vol == -1:
+            self.sound.set_volume(vol)
+    def start(self):
+        return
+        if self.loop:
+            self.sound.play()
+            
+class Sound:
+  def __init__ (self, filename):
+    #pygame.mixer.pre_init(44100,8,0)
+    pygame.mixer.init()
+    try:
+      self._snd = pygame.mixer.Sound(filename)
+      if not vol == -1:
+        self._snd.set_volume(vol2)
+    except:
+      print ("Error Loading: " + filename)
+      self._snd = None
+
+  def start (self):
+    if self._snd:
+      self._snd.play()
