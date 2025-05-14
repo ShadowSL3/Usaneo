@@ -25,28 +25,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      # Aggiorna la versione in __version__.py
-      - name: Bump version
-        run: |
-          python -c "
-import re
-with open('__version__.py', 'r') as f:
-    content = f.read()
-    version = re.search(r'VERSION = \"(\d+)\.(\d+)\.(\d+)\"', content)
-    major, minor, patch = map(int, version.groups())
-    new_version = f'{major}.{minor}.{patch + 1}'
-    new_content = re.sub(r'VERSION = \"\d+\.\d+\.\d+\"', f'VERSION = \"{new_version}\"', content)
-    with open('__version__.py', 'w') as f:
-        f.write(new_content)
-          "
-          git diff  # Debug: mostra le modifiche
-
-      # Configura Git per github-actions[bot]
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
+      # Aggiorna la versione in __version__.
       # Crea un commit
       - name: Commit changes
         run: |
