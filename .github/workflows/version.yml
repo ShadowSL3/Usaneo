@@ -1,0 +1,55 @@
+name: Bump Usaneo Version
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Esegue ogni giorno a mezzanotte UTC
+  workflow_dispatch:  # Permette esecuzione manuale
+
+permissions:
+  contents: write  # Permesso per commit
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout del codice
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Configura Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # Aggiorna la versione in __version__.py
+      - name: Bump version
+        run: |
+          python -c "
+import re
+with open('__version__.py', 'r') as f:
+    content = f.read()
+    version = re.search(r'VERSION = \"(\d+)\.(\d+)\.(\d+)\"', content)
+    major, minor, patch = map(int, version.groups())
+    new_version = f'{major}.{minor}.{patch + 1}'
+    new_content = re.sub(r'VERSION = \"\d+\.\d+\.\d+\"', f'VERSION = \"{new_version}\"', content)
+    with open('__version__.py', 'w') as f:
+        f.write(new_content)
+          "
+          git diff  # Debug: mostra le modifiche
+
+      # Configura Git per github-actions[bot]
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # Crea un commit
+      - name: Commit changes
+        run: |
+          git add __version__.py
+          git commit -m "chore: bump version to $(python -c 'import re; print(re.search(r\'VERSION = \"(.*?)\"', open(\'__version__.py\').read()).group(1))')" || echo "No changes to commit"
+          git push origin main
